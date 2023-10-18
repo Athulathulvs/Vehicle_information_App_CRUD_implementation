@@ -7,6 +7,9 @@ plugins {
 android {
     namespace = "com.example.crude_realtime_app"
     compileSdk = 34
+    buildFeatures{
+        viewBinding = true
+    }
 
     defaultConfig {
         applicationId = "com.example.crude_realtime_app"

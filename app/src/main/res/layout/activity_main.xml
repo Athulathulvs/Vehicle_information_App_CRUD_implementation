@@ -1,18 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@color/green"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_directions_car_filled_24" />
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginTop="39dp"
+            android:fontFamily="@font/luckiest_guy"
+            android:text="Car Info"
+            android:textColor="@color/white"
+            android:textSize="50sp"
+            android:layout_marginLeft="20dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/luckiest_guy"
+            android:gravity="center_horizontal"
+            android:text="Search Any Vehicle Number"
+            android:textColor="@color/white"
+            android:textSize="19dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="1dp"/>
+
+      </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/searchVehicleNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Vehicle Number"
+            android:layout_marginTop="50dp"
+            android:textSize="19sp"
+            android:padding="15dp"
+            android:background="@drawable/client_green_border"/>
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:textSize="19sp"
+            android:layout_marginTop="22dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_marginTop="25dp"
+      android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/client_green_border">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:orientation="horizontal"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="13dp">
+                <TextView
+                    android:id="@+id/ownerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Owner Name :"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/green"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/readOwnerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:textAlignment="viewEnd"/>
+
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="1dp"
+                android:alpha="0.5"
+                android:background="@color/green"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+                <TextView
+                    android:id="@+id/vehicleBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle Brand :"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/green"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/readVehicleBrand"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:textAlignment="viewEnd"/>
+
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_margin="1dp"
+                android:alpha="0.5"
+                android:background="@color/green"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:orientation="horizontal"
+                android:layout_margin="10dp">
+                <TextView
+                    android:id="@+id/vehicleRTO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle RTO :"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/green"
+                    android:layout_weight="1"/>
+                <TextView
+                    android:id="@+id/readVehicleRTO"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="18sp"
+                    android:layout_weight="1"
+                    android:textAlignment="viewEnd"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
