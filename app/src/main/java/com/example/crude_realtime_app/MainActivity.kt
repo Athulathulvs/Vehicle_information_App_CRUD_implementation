@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                     val vehicleBrand =it.child("vehicleBrand").value
                     val vehicleRTO =it.child("vehicleRTO").value
                     Toast.makeText(this, "Results Found", Toast.LENGTH_SHORT).show()
-                    binding.searchVehicleNumber.text.clear()
+                    binding.searchVehicleNumber.text
                     binding.readOwnerName.text =ownerName.toString()
                     binding.readVehicleBrand.text = vehicleBrand.toString()
                     binding.readVehicleRTO.text = vehicleRTO.toString()

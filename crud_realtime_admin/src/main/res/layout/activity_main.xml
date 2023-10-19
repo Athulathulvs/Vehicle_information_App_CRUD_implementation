@@ -50,16 +50,40 @@
                     android:layout_height="60dp"
                     android:text="Upload"
                     android:textSize="24sp"
-                    android:layout_marginTop="60dp"/>
-                <Button
-                    android:id="@+id/mainUpdate"
+                    android:layout_marginTop="60dp"
+                    />
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:text="Update"
-                    android:textSize="24sp"
-                    android:layout_marginTop="15dp"/>
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/mainUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="Update"
+                        android:textSize="24sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="22dp"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/green"
+                        app:strokeColor="@color/green"
+                        app:strokeWidth="2dp"/>
+                    <Button
+                        android:id="@+id/mainDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:text="Delete"
+                        android:textSize="24sp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="18dp"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/green"
+                        app:strokeColor="@color/green"
+                        app:strokeWidth="2dp"/>
+                </LinearLayout>
 
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
 
